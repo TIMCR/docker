@@ -67,6 +67,9 @@ ENV APP_ENV=prod \
     NOVOSGA_PRIORITY_DESCRIPTION="Priority service" \
     NOVOSGA_PLACE_NAME="Box"
 
+RUN set -xe \
+    chmod +x start.sh
+
 COPY start.sh /usr/local/bin
 COPY apache2/htaccess public/.htaccess
 COPY supervisor/apache2.conf /etc/supervisor/conf.d/apache2.conf
