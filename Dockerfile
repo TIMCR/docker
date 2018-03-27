@@ -6,7 +6,7 @@ ENV NOVOSGA_VER=v2.0.0-RC2 \
 
 ENV NOVOSGA_FILE=novosga.tar.gz \
     NOVOSGA_DIR=/var/www/html \
-    NOVOSGA_URL=https://github.com/novosga/novosga/archive/${NOVOSGA_VER}.tar.gz \
+    NOVOSGA_URL=https://github.com/novosga/novosga/archive/master.tar.gz \
     APP_ENV=prod \
     DATABASE_URL=mysql://root:123456@127.0.0.1:3306/novosga?charset=utf8mb4&serverVersion=5.7
 
