@@ -14,7 +14,6 @@ RUN set -xe \
     && mkdir -p $NOVOSGA_DIR && cd $NOVOSGA_DIR \
     && docker-php-ext-install pcntl \
     && curl -fSL ${NOVOSGA_URL} -o ${NOVOSGA_FILE} \
-    && echo "${NOVOSGA_MD5}  ${NOVOSGA_FILE}" | md5sum -c \
     && tar -xz --strip-components=1 -f ${NOVOSGA_FILE} \
     && rm ${NOVOSGA_FILE} \
     && composer install --no-dev -o
